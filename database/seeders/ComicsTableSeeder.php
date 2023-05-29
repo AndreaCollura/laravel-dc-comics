@@ -1,0 +1,37 @@
+<?php
+
+namespace Database\Seeders;
+
+use Illuminate\Database\Console\Seeds\WithoutModelEvents;
+use Illuminate\Database\Seeder;
+use App\Models\Comic;
+
+class ComicsTableSeeder extends Seeder
+{
+    /**
+     * Run the database seeds.
+     *
+     * @return void
+     */
+    public function run()
+    {
+        $comics = config('db.comics');
+
+
+
+        foreach($comics as $comic) {
+            $newComic = new Comic();
+            $newComic->title = $comic['title'];
+            $newComic->description = $comic['description'];
+            $newComic->image = $comic['thumb'];
+            $newComic->price = str_replace('$', '', $comic['price']);
+            $newComic->series = $comic['series'];
+            $newComic->release = $comic['sale_date'];
+            $newComic->type = $comic['type'];
+            /* $newComic->artists = $comic['artists'];
+            $newComic->writers = $comic['writers']; */
+            $newComic->save();
+
+        }
+    }
+}

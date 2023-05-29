@@ -1,5 +1,4 @@
-@use './partials/variables' as *;
-
+@use "./partials/variables" as *;
 
 $fa-font-path: "../fonts/webfonts" !default;
 
@@ -8,5 +7,203 @@ $fa-font-path: "../fonts/webfonts" !default;
 @import "~@fortawesome/fontawesome-free/scss/solid";
 @import "~@fortawesome/fontawesome-free/scss/brands";
 
-@import '~bootstrap/scss/bootstrap';
+@import "~bootstrap/scss/bootstrap";
 
+/* BODY */
+
+.debug {
+    border: 1px solid red;
+}
+body {
+    width: 100%;
+    height: 100vh;
+}
+
+/* HEADER */
+
+header {
+    li {
+        list-style: none;
+        a {
+            text-decoration: none;
+            color: black;
+            text-transform: uppercase;
+            font-size: 0.8rem;
+            font-weight: bold;
+            padding-bottom: 67px;
+
+            &:hover {
+                color: $blue-bg;
+                border-bottom: 3px solid $blue-bg;
+            }
+        }
+    }
+
+    img {
+        width: 80%;
+    }
+
+    .container {
+        padding: 40px 0 37px 0;
+    }
+}
+
+/* JUMBO */
+
+.jumbo-box {
+    background-image: url(../img/jumbotron.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 500px;
+
+    .current-label {
+        width: 200px;
+        height: 40px;
+        background-color: $blue-bg;
+        text-align: center;
+        position: relative;
+        top: 455px;
+
+        h5 {
+            text-align: center;
+        }
+    }
+}
+
+/* COMIC-LIST */
+
+#comics-list {
+    .content-bg {
+        background-color: #1c1c1c;
+    }
+
+    .comic-box {
+        width: 180px;
+        .comic {
+            width: 180px;
+            height: 170px;
+
+            /* overflow-y: hidden; */
+            img {
+                width: 180px;
+            height: 170px;
+                object-fit: cover;
+                object-position: center;
+            }
+        }
+    }
+
+    span {
+        font-size: 0.9rem;
+        font-weight: bold;
+    }
+}
+
+/* SHOP-LIST */
+
+.icon-box {
+    background-color: $blue-bg;
+    // height: 140px;
+
+    img {
+        width: 100%;
+        height: 100%;
+        object-fit: contain;
+    }
+
+    span {
+        font-size: 0.8rem;
+        white-space: nowrap;
+    }
+
+    ul {
+        list-style: none;
+    }
+
+    .shopicon-box {
+        width: 50px;
+        height: 50px;
+    }
+}
+
+/* FOOTER */
+
+#footer {
+    .footer-top {
+        background-image: url(../img/footer-bg.jpg);
+        background-repeat: no-repeat;
+        background-size: cover;
+
+        .logo-box {
+            height: 400px;
+            position: relative;
+            overflow: hidden;
+            .foot-logo {
+                position: absolute;
+                top: -90px;
+            }
+        }
+        .linksBox {
+            width: 400px;
+            height: 300px;
+            li {
+                list-style: none;
+                color: $blue-bg;
+                a {
+                    text-decoration: none;
+                    color: rgba(255, 255, 255, 0.519);
+                    font-size: 0.7rem;
+                }
+            }
+        }
+    }
+
+    .footer-bot {
+        background-color: $grey-bg;
+        height: 120px;
+
+        a {
+            text-decoration: none;
+            color: rgba(255, 255, 255, 0.519);
+            font-size: 0.7rem;
+        }
+
+        button {
+            width: 140px;
+            height: 40px;
+            border: 2px solid $blue-bg;
+            margin-left: 10px;
+            background-color: transparent;
+            color: white;
+            text-transform: uppercase;
+        }
+    }
+}
+
+
+
+/* COMIC-INFO */
+
+#comic-info{
+
+    .blue-box{
+        background-color: $blue-bg;
+        height: 80px;
+        position: relative;
+
+        img{
+            position: absolute;
+            bottom: 30px;
+            width: 200px;
+            height: 300px;
+            object-fit: cover;
+            object-position: center;
+        }
+
+    }
+
+    /* .details-box{
+
+
+    } */
+}
