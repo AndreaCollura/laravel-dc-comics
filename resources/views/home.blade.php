@@ -4,7 +4,8 @@
     <section id="comics-list">
         <div class="content-bg">
             <div class="container py-4 px-0">
-                <a class="btn btn-primary" href="{{ route('comics.index')}}">view all</a>
+                <a class="btn btn-primary text-capitalize my-5 mx-3" href="{{ route('comics.index')}}">view all</a>
+                <a class="btn btn-warning text-capitalize my-5" href="{{ route('comics.create')}}">add new comic</a>
                 <div class="d-flex flex-wrap justify-content-between gap-3 ms-4">
                     @foreach ($comics as $comic)
                         <div class="comic-box d-flex flex-column ms-2 mt-2">
