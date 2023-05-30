@@ -4,7 +4,7 @@
     <section id="comics-list" class="">
         <div class="content-bg">
             <div class="container py-5 px-0">
-                <div class="d-flex flex-wrap justify-content-between gap-3 ms-4 mb-5">
+                <div class="d-flex flex-wrap justify-content-start gap-3 ms-4 mb-5">
                     @foreach ($comics as $comic)
                         <div class="comic-box d-flex flex-column ms-2 my-5">
                             <a href="{{ route('comics.show', $comic) }}">
