@@ -78,19 +78,17 @@ header {
     }
 
     .comic-box {
-        width: 180px;
-        .comic {
-            width: 180px;
-            height: 170px;
+            height: 300px;
+            width: 200px;
+            text-align: center;
 
-            /* overflow-y: hidden; */
             img {
+                height: 260px;
                 width: 180px;
-            height: 170px;
                 object-fit: cover;
                 object-position: center;
+                overflow: hidden;
             }
-        }
     }
 
     span {
